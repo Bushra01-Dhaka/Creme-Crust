@@ -36,7 +36,7 @@ const ShopPage = () => {
             alt="Cafe Interior"
             width={600}
             height={300}
-            className="rounded-xl object-cover w-full"
+            className="rounded-xl object-cover w-full shadow-xl shadow-accent"
           />
         </div>
 
