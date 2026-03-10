@@ -1,9 +1,12 @@
 import Image from "next/image";
 import { FaStar } from "react-icons/fa6";
 import { FaStarHalfAlt } from "react-icons/fa";
+import { SiComma } from "react-icons/si";
+import { MdArrowOutward } from "react-icons/md";
+import Link from "next/link";
 const HeroBanner = () => {
   return (
-    <div className="flex justify-center items-center bg-primary p-20">
+    <div className="flex justify-center items-center bg-primary p-20 overflow-hidden">
       <div>
         <div className="text-center flex flex-col relative z-5">
           <div className="flex justify-center">
@@ -52,6 +55,16 @@ const HeroBanner = () => {
             <Image className="hidden lg:block absolute top-6 rotate-45" src="/1.jpg" alt="Croissant photo" width="300" height="800" />
             <Image className="hidden  lg:block absolute right-30 top-0 " src="/3.jpg" alt="Cafe photo" width="300" height="800" />
             <Image className="absolute bottom-[10] lg:bottom-[-40] lg:right-90 rotate-180" src="/4.jpg" alt="Croissant photo" width="600" height="800" />
+
+            <p className="pt-10 lg:pt-20 text-justify lg:text-center uppercase text-white max-w-[400px] mx-auto">
+              <SiComma className="inline text-2xl text-white rotate-180 relative bottom-6 left-4" /> <SiComma className="inline text-2xl text-white rotate-180 relative bottom-6" /> Enjoy freshly baked bakery delights, from buttery croissants and delicate pastries to perfectly brewed coffee. At Crème & Crust, every bite is crafted to bring comfort and joy — the perfect place to spend quality time with friends, family, and your loved ones.  
+            </p>
+
+            <div className="py-6 flex justify-center">
+             <Link href="/">
+                <button className="btn btn-accent border-0 shadow-xl  text-primary rounded-full uppercase transition-all duration-75 hover:scale-120">Reserve Now <MdArrowOutward className="text-2xl inline" /></button>
+             </Link>
+            </div>
  
         </div>
 
