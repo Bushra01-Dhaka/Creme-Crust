@@ -1,4 +1,5 @@
 import HeroBanner from "./homeComponents/HeroBanner";
+import MenusClient from "./homeComponents/MenusClient";
 import MenusPage from "./homeComponents/MenusPage";
 import ShopPage from "./homeComponents/ShopPage";
 

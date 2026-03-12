@@ -12,6 +12,4 @@ const client = new MongoClient(uri, {
 });
 
 return client.db(process.env.DB_NAME).collection(collectionName);
-
-
 }

@@ -69,7 +69,7 @@ const ShopPage = () => {
 
           </div>
 
-          <Link href="/">
+          <Link href="/menus">
             <button className="btn btn-accent border-0 shadow-xl text-primary rounded-full uppercase transition-all duration-75 hover:scale-110">
               Order Now <MdArrowOutward className="text-2xl inline" />
             </button>
