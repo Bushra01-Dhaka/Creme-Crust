@@ -138,7 +138,7 @@ const MenusClient = ({ menus }) => {
           <div className="flex justify-center">
             <button
               onClick={() => setVisible((prev) => prev + 6)}
-              className="btn btn-accent text-primary rounded-full"
+              className="btn btn-accent text-primary uppercase hover:scale-105 transition-all duration-100 rounded-full"
             >
               See More
             </button>
