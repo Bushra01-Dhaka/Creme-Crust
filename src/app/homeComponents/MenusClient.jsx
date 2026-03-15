@@ -29,7 +29,7 @@ const MenusClient = ({ menus }) => {
         {/* Filter Buttons */}
         <motion.div
           layoutId="activeFilter"
-          className="flex justify-center gap-4 overflow-x-auto py-6 px-4"
+          className="flex flex-wrap lg:flex-row justify-center gap-4 overflow-x-auto py-6 px-4"
         >
           <button
             onClick={() => {
