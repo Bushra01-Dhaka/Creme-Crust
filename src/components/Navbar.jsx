@@ -24,7 +24,7 @@ const Navbar = () => {
           </div>
           <ul
             tabIndex="-1"
-            className="menu menu-sm dropdown-content bg-base-100 rounded-box z-1 mt-3 w-52 p-2 shadow"
+            className="menu menu-sm dropdown-content uppercase bg-base-100 rounded-box z-1 mt-3 w-52 p-2 shadow"
           >
             <li>
               <Link href="/shop">Shop</Link>
@@ -39,23 +39,30 @@ const Navbar = () => {
               <a>Contact Us</a>
             </li>
             <li>
-                 <Link href="/">
-           <button className="btn btn-accent text-primary btn-sm w-full">Log in</button>
-         </Link>
+              <Link
+                href="login"
+                className="btn btn-accent text-primary btn-sm w-full"
+              >
+                Log in
+              </Link>
             </li>
           </ul>
         </div>
       </div>
       <div className="navbar-center">
-        <Link className="font-bold text-accent text-xl mx-auto" href="/">Crème & Crust</Link>
+        <Link className="font-bold text-accent text-xl mx-auto" href="/">
+          Crème & Crust
+        </Link>
       </div>
-      
+
       <div className="navbar-end ">
-         <div>
-          <Link href="/">
-           <button className=" btn btn-accent transition-all duration-75 hover:scale-110 text-primary btn-xs uppercase rounded-full border-0 ">Log in</button>
-         </Link>
-         </div>
+        <div>
+          <Link href="/login">
+            <button className=" btn btn-accent transition-all duration-75 hover:scale-110 text-primary btn-xs uppercase rounded-full border-0 ">
+              Log in
+            </button>
+          </Link>
+        </div>
       </div>
     </div>
   );

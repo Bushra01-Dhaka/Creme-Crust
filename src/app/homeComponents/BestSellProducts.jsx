@@ -7,7 +7,15 @@ import { FaArrowRight } from "react-icons/fa6";
 const BestSellProducts = async() => {
     const menuCollection = dbConnect("menu");
     const data = await menuCollection.find({}).toArray();
-    const bestSell =  data.filter((item) => item?.sell_type === "Best Sale")
+    const bestSell = data
+  .filter((item) => item?.sell_type === "Best Sale")
+  .map((item) => ({
+    ...item,
+    _id: item._id.toString(),
+  }));
+
+  
+  
     console.log("Best Sell Products: ", bestSell)
   return (
     <div className="flex justify-center items-center bg-accent py-20 px-4 lg:px-20">
@@ -18,8 +26,10 @@ const BestSellProducts = async() => {
             </div>
 
             <div className="py-10  flex justify-center items-center">
-               <BestSellSlider items={bestSell}/>
+               <BestSellSlider items={bestSell} 
+               />
             </div>
+            
 
 
         </div>
