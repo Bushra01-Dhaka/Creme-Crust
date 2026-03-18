@@ -30,7 +30,7 @@ const Navbar = () => {
               <Link href="/shop">Shop</Link>
             </li>
             <li>
-              <Link href="menus">Menu</Link>
+              <Link href="/menus">Menu</Link>
             </li>
             <li>
               <a>Reserve</a>
@@ -40,7 +40,7 @@ const Navbar = () => {
             </li>
             <li>
               <Link
-                href="login"
+                href="/login"
                 className="btn btn-accent text-primary btn-sm w-full"
               >
                 Log in
