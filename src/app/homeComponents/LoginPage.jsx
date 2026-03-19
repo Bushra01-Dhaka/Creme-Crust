@@ -4,20 +4,28 @@ import Link from "next/link";
 import { FaGoogle } from "react-icons/fa6";
 
 const LoginPage = () => {
+  const handleSubmit = async(e) => {
+      e.preventDefault();
+      const form = e.target;
+      const email = form.email.value;
+      const password = form.password.value;
+      console.log( email, password);
+  }
   return (
     <div className="flex justify-center max-w-screen-2xl mx-auto items-center px-6 lg:px-20 py-20 bg-primary uppercase font-style text-white">
       <div className="flex flex-col lg:flex-row-reverse justify-between gap-10 lg:gap-40 items-start py-6 ">
-        {/* left */}
+        {/* left : Login Form*/}
         <div className="flex-1 w-full max-w-md">
           <h2 className="text-3xl font-extrabold text-accent">Welcome Back!</h2>
           <p className="py-2 text-md">Login with Crème & Crust</p>
 
-          <form className="mt-6 space-y-4">
+          <form onSubmit={handleSubmit} className="mt-6 space-y-4">
             {/* Email */}
             <div>
               <label className="text-sm">Email</label>
               <input
                 type="email"
+                name="email"
                 placeholder="Enter your email"
                 className="input input-bordered rounded-full w-full bg-white text-black mt-1"
               />
@@ -28,6 +36,7 @@ const LoginPage = () => {
               <label className="text-sm">Password</label>
               <input
                 type="password"
+                 name="password"
                 placeholder="Enter your password"
                 className="input input-bordered rounded-full w-full bg-white text-black mt-1"
               />
@@ -91,8 +100,8 @@ const LoginPage = () => {
                 const x = e.clientX - rect.left;
                 const y = e.clientY - rect.top;
 
-                const rotateX = (y / rect.height - 0.5) * 20;
-                const rotateY = (x / rect.width - 0.5) * -20;
+                const rotateX = (y / rect.height - 0.5) * 10;
+                const rotateY = (x / rect.width - 0.5) * -10;
 
                 e.currentTarget.style.transform = `
           rotateX(${rotateX}deg) 
