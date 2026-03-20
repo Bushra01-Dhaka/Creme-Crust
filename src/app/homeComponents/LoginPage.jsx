@@ -2,6 +2,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import { FaGoogle } from "react-icons/fa6";
+import {  signIn } from "next-auth/react"
 
 const LoginPage = () => {
   const handleSubmit = async(e) => {
@@ -9,6 +10,7 @@ const LoginPage = () => {
       const form = e.target;
       const email = form.email.value;
       const password = form.password.value;
+      await signIn("creadentials", {email, password})
       console.log( email, password);
   }
   return (
